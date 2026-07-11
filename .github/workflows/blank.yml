@@ -13,7 +13,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ./Terraform   # <-- Change if your terraform code is in another folder
+        working-directory: ./Parent_Module  # <-- Change if your terraform code is in another folder
 
     steps:
       # Checkout Repository
@@ -35,5 +35,23 @@ jobs:
       # Verify Azure Login
       - name: Verify Azure Account
         run: az account show
-        working-directory: Parent_Module
 
+      # Terraform Init
+      - name: Terraform Init
+        run: terraform init
+
+      # Terraform Format Check
+      - name: Terraform Format
+        run: terraform fmt -check -recursive
+
+      # Terraform Validate
+      - name: Terraform Validate
+        run: terraform validate
+
+      # Terraform Plan
+      - name: Terraform Plan
+        run: terraform plan -out=tfplan
+
+      # Terraform Apply
+      - name: Terraform Apply
+        run: terraform apply -auto-approve tfplan
