@@ -35,5 +35,5 @@ jobs:
       # Verify Azure Login
       - name: Verify Azure Account
         run: az account show
-        working-directory: /Parent_Module
+        working-directory: Parent_Module
 
