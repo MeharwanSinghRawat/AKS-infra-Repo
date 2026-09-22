@@ -30,18 +30,18 @@ aks_clusters = {
 }
 
 # terraform.tfvars
-# acr_registries = {
+ acr_registries = {
 
-#   acr1 = {
-#     name          = "meharacr321"
-#     rg_name       = "aks_rg"
-#     location      = "West Europe"
-#     sku           = "Basic"
-#     admin_enabled = true
-#     environment   = "dev"
-#     project       = "aks-demo"
-#   }
-# }
+   acr1 = {
+     name          = "meharacr321"
+     rg_name       = "aks_rg"
+     location      = "West Europe"
+     sku           = "Basic"
+     admin_enabled = true
+     environment   = "dev"
+     project       = "aks-demo"
+   }
+ }
 
 
 
