@@ -30,14 +30,14 @@ variable "aks_clusters" {
 }
 
 
-# variable "acr_registries" {
-#   type = map(object({
-#     name          = string
-#     rg_name       = string
-#     location      = string
-#     sku           = string
-#     admin_enabled = bool
-#     environment   = string
-#     project       = string
-#   }))
-# }
+ variable "acr_registries" {
+   type = map(object({
+     name          = string
+     rg_name       = string
+     location      = string
+     sku           = string
+     admin_enabled = bool
+     environment   = string
+     project       = string
+   }))
+ }
