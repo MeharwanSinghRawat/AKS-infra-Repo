@@ -33,7 +33,7 @@ aks_clusters = {
  acr_registries = {
 
    acr1 = {
-     name          = "meharacr321"
+     name          = "meharacr3212"
      rg_name       = "aks_rg"
      location      = "east us"
      sku           = "Basic"
